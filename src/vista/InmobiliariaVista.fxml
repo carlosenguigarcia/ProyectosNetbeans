@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ventana_principal" prefHeight="653.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.InmobiliariaController">
+   <children>
+      <Label layoutX="38.0" layoutY="30.0" text="Referencia">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtReferencia" layoutX="151.0" layoutY="26.0" prefHeight="33.0" prefWidth="178.0" />
+      <Button fx:id="btnRegistrar" layoutX="404.0" layoutY="21.0" mnemonicParsing="false" onAction="#registrar" prefHeight="33.0" prefWidth="80.0" text="Registrar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="663.0" layoutY="39.0" text="Actualizar pedido">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="83.0" text="Tipo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rdbPiso" layoutX="107.0" layoutY="133.0" mnemonicParsing="false" onAction="#quitarPiso" text="Piso">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tipo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdbChalet" layoutX="288.0" layoutY="133.0" mnemonicParsing="false" onAction="#quitarChalet" text="Chalet" toggleGroup="$tipo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="rdbDuplex" layoutX="474.0" layoutY="133.0" mnemonicParsing="false" onAction="#quitarDuplex" text="Duplex" toggleGroup="$tipo">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <ComboBox fx:id="Combo" layoutX="571.0" layoutY="103.0" prefHeight="33.0" prefWidth="167.0" promptText="Elige una opción" />
+      <Button fx:id="btnActualizar" layoutX="770.0" layoutY="103.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="33.0" prefWidth="87.0" text="Actualizar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="104.0" layoutY="205.0" text="Características">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="450.0" layoutY="205.0" text="Otras caracteristicas">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="262.0" text="Precio">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="118.0" layoutY="317.0" text="Superficie">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="373.0" text="Habitaciones">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="443.0" layoutY="383.0" text="Tamaño de planta 2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="443.0" layoutY="337.0" text="Tamaño de planta 1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="488.0" layoutY="297.0" text="Parcela">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="488.0" layoutY="252.0" text="Planta">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPrecio" layoutX="222.0" layoutY="260.0" prefHeight="25.0" prefWidth="167.0" />
+      <TextField fx:id="txtSuperficie" layoutX="222.0" layoutY="313.0" prefHeight="25.0" prefWidth="167.0" />
+      <TextField fx:id="txtHabitaciones" layoutX="222.0" layoutY="371.0" prefHeight="25.0" prefWidth="167.0" />
+      <TextField fx:id="txtTam2" layoutX="603.0" layoutY="381.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="txtTam1" layoutX="603.0" layoutY="335.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="txtParcela" layoutX="603.0" layoutY="300.0" prefHeight="25.0" prefWidth="107.0" />
+      <TextField fx:id="txtPlanta" layoutX="603.0" layoutY="260.0" prefHeight="25.0" prefWidth="107.0" />
+      <Button fx:id="btnLimpiar" layoutX="764.0" layoutY="300.0" mnemonicParsing="false" onAction="#limpiar" prefHeight="25.0" prefWidth="80.0" text="Limpiar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnBorrarTodas" layoutX="455.0" layoutY="595.0" mnemonicParsing="false" onAction="#borrarTodas" prefHeight="33.0" prefWidth="107.0" text="Borrar todas">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBorrarCasa" layoutX="35.0" layoutY="595.0" mnemonicParsing="false" onAction="#borrarCasa" prefHeight="33.0" prefWidth="87.0" text="Borar casa">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ListView fx:id="listview" fixedCellSize="0.0" layoutX="35.0" layoutY="427.0" prefHeight="162.0" prefWidth="818.0" />
+      <Button fx:id="btnCargar" layoutX="511.0" layoutY="23.0" mnemonicParsing="false" onAction="#cargarBasedeDatos" prefHeight="33.0" prefWidth="69.0" text="Cargar" />
+   </children>
+</AnchorPane>
